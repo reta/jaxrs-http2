@@ -1,0 +1,10 @@
+server:
+  port: 19091
+  http2:
+    enabled: true
+---
+spring:
+  config:    activate:      on-profile: h2
+server:  ssl:    key-store: "classpath:certs/server.jks"
+    key-store-password: "strong-passw0rd-here"
+    key-password: "strong-passw0rd-here"
